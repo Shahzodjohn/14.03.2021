@@ -9,10 +9,10 @@ namespace ConsoleApp50
         {
             var mydictionary = new MyDictionary[]
             {
-                new MyDictionary{LanguageType = "C#", State = MyDictionaryState.CurrentlyExplore},
-                new MyDictionary{LanguageType = "PHP", State = MyDictionaryState.FinnishedCourse},
-                new MyDictionary{LanguageType = "GoLang", State = MyDictionaryState.CurrentlyExplore},
-                new MyDictionary{LanguageType = "JavaScript", State = MyDictionaryState.NewLanguage}
+                new MyDictionary{Id = 1, LanguageType = "C#", State = MyDictionaryState.CurrentlyExplore},
+                new MyDictionary{Id = 1, LanguageType = "PHP", State = MyDictionaryState.FinnishedCourse},
+                new MyDictionary{Id = 1, LanguageType = "GoLang", State = MyDictionaryState.CurrentlyExplore},
+                new MyDictionary{Id = 1, LanguageType = "JavaScript", State = MyDictionaryState.NewLanguage}
             };
             foreach (var item in mydictionary)
             {
@@ -36,6 +36,7 @@ namespace ConsoleApp50
             
         class MyDictionary
         {
+            public int Id { get; set; }
             public string LanguageType { get; set; }
             public MyDictionaryState State { get; set; }
         }
